@@ -50,4 +50,6 @@ We expect the restaurants, coffee shops and cafes to generate foot traffic, so w
 
 ## Results
 
-We collected the foursquare data for Toronto and split the venues into bakeries and related shopping venues.  
+We collected the foursquare data for Toronto and split the venues into bakeries and related shopping venues. This leaves 45 bakeries and 642 related venues.
+
+![counts](https://github.com/simongarisch/Coursera_Capstone/blob/master/week%205/venue_counts.png)
