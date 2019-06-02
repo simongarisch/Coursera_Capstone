@@ -44,7 +44,7 @@ We expect the restaurants, coffee shops and cafes to generate foot traffic, so w
 
 We collected the foursquare data for Toronto, cleaned and filtered it as described in the methodology section, then split the venues into bakeries and related shopping venues. This leaves 45 bakeries and 642 shops / related venues.
 
-![counts](https://github.com/simongarisch/Coursera_Capstone/blob/master/week%205/venue_counts.png)
+![counts](https://github.com/simongarisch/Coursera_Capstone/blob/master/week%205/venue_counts.png?raw=true)
 
 We then looked for shop clusters using kmeans. Each cluster was assigned a different colour and the bakeries were overlaid in red. 
 
