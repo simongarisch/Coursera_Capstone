@@ -26,8 +26,28 @@ The foursquare API data was collected and exported to toronto_venues.csv. There 
 
 * We then filtered only the venue categories including categories = ["Bakery", "Restaurant", "Coffee Shop", "Café"]. These are some of the main venue tags if you sort the venues by value counts. We then kept the bakery venues to one side and grouped all of the others as related venues.
 
+* ```python
+  def group_related_shops(venue):
+      # group the venues ["Restaurant", "Coffee Shop", "Café"] as related
+      if venue in ["Restaurant", "Coffee Shop", "Café"]:
+          return "Related Venue"
+      else:
+          return venue
+      
+  df["Venue Category"] = df["Venue Category"].apply(lambda x: group_related_shops(x))
+  df["Venue Category"].value_counts()
+  ```
 
 
-Once the data was cleaned and filtered we 
+
+We expect the restaurants, coffee shops and cafes to generate foot traffic, so we'd want to open our bakery close to these venues. On the other hand we want competing bakeries to be kept to a minimum. Within the notebook we'll take two steps:
+
+* We'll use the kmeans classifier to look for shop / related venue clusters.
+
+* For each of the clusters we'll search for the lowest number of bakeries relative to other related shopping venues.
 
 
+
+## Results
+
+We collected the foursquare data for Toronto and split the venues into bakeries and related shopping venues.  
